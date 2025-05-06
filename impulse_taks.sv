@@ -19,7 +19,7 @@ module formula #(
 
     assign in_ready = ~stage_1_ready || in_valid;
 	 
-    always_ff @(posedge clk or negedge rst_n) begin
+    always_ff @(posedge clk ) begin
 
     if(!rst_n) begin
 
@@ -59,7 +59,7 @@ module formula #(
 
     end
 
-    always_ff @( posedge clk or negedge rst_n ) begin
+    always_ff @( posedge clk ) begin
 
          if(!rst_n) begin
 
@@ -90,7 +90,7 @@ module formula #(
 
     end
 
-    always_ff @( posedge clk or negedge rst_n) begin
+    always_ff @( posedge clk ) begin
 
          if(!rst_n) begin
 
